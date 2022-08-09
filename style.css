@@ -1,0 +1,58 @@
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container{
+    display:flex;
+    flex-direction: column;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: center;
+    align-items: center;
+    background-color: gainsboro;
+    padding-bottom: 40px;
+    width: 500px;
+}
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: whitesmoke;
+    padding: 12px;
+    border: white solid;
+    border-radius: 8px;
+}
+
+#info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#people-counter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid black;
+    margin: 20px;
+    width: 40px;
+    background-color: white;
+}
+
+#remove-people,
+#add-people{
+    width: 50px;
+    height: 50px;
+}
+
+#add-people{
+    background-color: rgb(123, 228, 123);
+}
+
+#remove-people{
+    background-color: rgb(228, 123, 123);
+}
