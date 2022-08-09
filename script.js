@@ -1,25 +1,30 @@
 const buttonModule = (function(){
     'use strict';
 
+    //buttons
     const addButton = document.querySelector("#add-people")
     const removeButton = document.querySelector("#remove-people")
 
-    return {addButton, removeButton};
-})();
-
-
-const counterModule = (function(){
-    'use strict';
-
+    //people-counter
     const _peopleCounter = document.querySelector("#people-counter");
     _peopleCounter.innerText = 0;
 
-    const incrementCounter = () => _peopleCounter++;
+    const _incrementCounter = () => _peopleCounter.innerText = ++_peopleCounter.innerText;
 
-    const decrementCounter = () => _peopleCounter--;
+    const _decrementCounter = () => {
 
+        if (_peopleCounter.innerText === 0){
+            return _peopleCounter.innerText;
 
-    return {incrementCounter, decrementCounter};
+        }else{
+            _peopleCounter.innerText = --_peopleCounter.innerText;
+        }
+        
+    };
 
+    addButton.addEventListener('click', () => _incrementCounter())
+    removeButton.addEventListener('click', () => _decrementCounter())
+
+    return {addButton, removeButton};
 })();
 
